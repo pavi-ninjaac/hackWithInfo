@@ -1,0 +1,38 @@
+def getCount (str):
+    li=str
+    li=list(str)
+    print(li)
+    count=0
+    last_index=(len(li)-1)
+    first=li[0]
+    last=li[last_index]
+    if('?' in li):
+        for ine,i in enumerate(li):
+            
+            if(i=='?'):
+                index=ine
+                if(index==(len(li)-1)):
+                    count=1
+                    return count
+                else:
+                    count=24
+                    return count
+            else:
+                continue
+    else:
+
+        if(first==last):
+                count=0
+        else:
+                count=1
+    return count
+
+T = int(input("test case"))
+for _ in range(T):
+    str = input("entert str")
+
+    out_ = getCount(str)
+    print (out_)
+    
+
+
