@@ -1,0 +1,35 @@
+n=int(input("enter no of boys"))
+m=int(input("enter no of girls"))
+b=[]*n
+g=[]*m
+diff=[]
+for i in range(n):
+    b.append(int(input("enter %d th boy height")))
+for j in range(m):
+    g.append(int(input("enter %d thgirl height")))
+pair=min(n,m)
+if(len(b)==pair):
+    b.sort()
+else:
+    dirfferent=int(len(b)-pair)
+    print(dirfferent)
+    b.sort()
+    b=b[dirfferent:]
+print(b)
+if(len(g)==pair):
+    g.sort()
+else:
+    dirfferent=int(len(g)-pair)
+    print(dirfferent)
+    g.sort()
+    g=g[dirfferent:]
+print(g)
+
+for (i,j) in zip(b,g):
+    if(i==j):
+        diff.append(0)
+    else:
+        diff.append(abs(i-j))
+imbalance=max(diff)
+print(imbalance)
+    
