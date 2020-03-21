@@ -1,0 +1,8 @@
+
+n,m=map(int,input("enter 2 values").split())
+print(n)
+A=[]
+for _ in range(n):
+    a=input("enter values").split()
+    A.append(a)
+print(A)
